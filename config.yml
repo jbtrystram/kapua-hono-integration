@@ -1,0 +1,68 @@
+apiVersion: v1
+kind: Template
+metadata:
+
+  name: kapua-hono-integration-template
+
+  annotations:
+    description: "This is a simple template to use the the Kapua's hono-integration module"
+    iconClass: "pficon-topology"
+    tags: "iot,quickstart"
+    openshift.io/display-name: "Eclipse Hono™ & Kapua™ integration"
+
+objects:
+#import fabric8 image
+ - kind: ImageStream
+   apiVersion: v1
+   metadata:
+    name: fabric8-s2i-java
+   spec:
+    tags:
+    - from:
+        kind: DockerImage
+        name: docker.io/fabric8/s2i-java:2.3
+      importPolicy:
+        scheduled: true
+      name: "2.3"
+      referencePolicy:
+        type: Source
+
+#declare our image
+ - kind: ImageStream
+   apiVersion: v1
+   metadata:
+    name: kapua-hono-integration
+
+#buid!
+ - kind: BuildConfig
+   apiVersion: v1
+   metadata:
+    name: kapua-hono-integration-app
+    labels:
+      app: hono-service
+   spec:
+    triggers:
+      - type: ImageChange
+      - type: ConfigChange
+    source:
+      type: Git
+      git:
+        uri: https://github.com/jbtrystram/kapua-hono-integration
+        ref: master
+    strategy:
+      type: source
+      sourceStrategy:
+        from:
+          kind: ImageStreamTag
+          name: fabric8-s2i-java:2.3
+        env:
+        - name: MAVEN_ARGS
+          value: package
+        - name: MAVEN_ARGS_APPEND
+          value: -Dcheckstyle.skip -Dmaven.test.skip=true -DskipTests
+        - name: ARTIFACT_DIR
+          value: application/target/
+    output:
+      to:
+        kind: ImageStreamTag
+        name: kapua-hono-integration:latest
