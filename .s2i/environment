@@ -1,0 +1,4 @@
+MAVEN_ARGS=package
+MAVEN_ARGS_APPEND=-DskipTests -Dmaven.test.skip=true
+ARTIFACT_DIR=application/target/
+

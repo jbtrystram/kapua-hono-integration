@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!--
+    Copyright (c) 2018 Red Hat and/or its affiliates and others
+
+    All rights reserved. This program and the accompanying materials
+    are made available under the terms of the Eclipse Public License v1.0
+    which accompanies this distribution, and is available at
+    http://www.eclipse.org/legal/epl-v10.html
+
+    Contributors:
+        Red Hat - initial API and implementation
+ -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>hono-integration</artifactId>
+        <groupId>org.eclipse.kapua</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>hono-integration-services</artifactId>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <hono.version>0.8-SNAPSHOT</hono.version>
+        <kapua.version>1.0.2</kapua.version>
+    </properties>
+
+    <dependencies>
+
+
+        <!-- Hono -->
+        <dependency>
+            <groupId>org.eclipse.hono</groupId>
+            <artifactId>hono-service-base</artifactId>
+            <version>0.8</version>
+        </dependency>
+
+
+
+        <!-- Kapua -->
+
+        <dependency>
+            <groupId>org.eclipse.kapua</groupId>
+            <artifactId>kapua-service-api</artifactId>
+            <version>${kapua.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.kapua</groupId>
+            <artifactId>kapua-device-api</artifactId>
+            <version>${kapua.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.kapua</groupId>
+            <artifactId>kapua-broker-api</artifactId>
+            <version>${kapua.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.kapua</groupId>
+            <artifactId>kapua-broker-core</artifactId>
+            <version>${kapua.version}</version>
+        </dependency>
+      <!--  <dependency>
+            <groupId>org.eclipse.kapua</groupId>
+            <artifactId>kapua-qa-steps</artifactId>
+            <version>1.0.0</version>
+            <scope>test</scope>
+        </dependency>
+        -->
+
+        <!-- Misc -->
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>3.5.4</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
