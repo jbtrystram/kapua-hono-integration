@@ -73,7 +73,9 @@
             <artifactId>kapua-broker-core</artifactId>
             <version>${kapua.version}</version>
         </dependency>
-      <!--  <dependency>
+
+        <!--  Needed for tests
+       <dependency>
             <groupId>org.eclipse.kapua</groupId>
             <artifactId>kapua-qa-steps</artifactId>
             <version>1.0.0</version>
@@ -85,6 +87,11 @@
         <dependency>
             <groupId>io.vertx</groupId>
             <artifactId>vertx-core</artifactId>
+            <version>3.5.4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-unit</artifactId>
             <version>3.5.4</version>
         </dependency>
 

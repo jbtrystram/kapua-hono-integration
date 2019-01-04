@@ -49,7 +49,6 @@
                             <artifactId>kapua-commons</artifactId>
                         </dependency>
 
-
                         <!-- Hono -->
                         <dependency>
                             <groupId>org.eclipse.hono</groupId>
@@ -102,11 +101,125 @@
                             <version>3.5.1</version>
                             <scope>test</scope>
                         </dependency>
+
+                        <!-- from original pom file -->
                         <dependency>
                             <groupId>org.eclipse.kapua</groupId>
-                            <artifactId>kapua-qa-steps</artifactId>
-                            <scope>test</scope>
+                            <artifactId>hono-integration-services</artifactId>
                         </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-service-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-packages-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-configuration-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-command-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-bundle-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-security-authentication-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-security-authorization-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-account-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-user-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-registry-api</artifactId>
+                        </dependency>
+
+                        <!-- Internal dependencies -->
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-account-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-registry-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-user-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-security-shiro</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-commons</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-message-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-message-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-call-kura</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-device-commons</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-datastore-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-datastore-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-datastore-client-embedded</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-simulator-kura</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-tag-api</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-tag-internal</artifactId>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-translator-kapua-kura</artifactId>
+                        </dependency>
+
+                        <dependency>
+                            <groupId>org.eclipse.kapua</groupId>
+                            <artifactId>kapua-broker-core</artifactId>
+                        </dependency>
+
+
                     </requiresUnpack>
                 </configuration>
                 <executions>

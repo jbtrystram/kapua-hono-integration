@@ -28,12 +28,12 @@ objects:
         type: Source
 
 #declare our image
- - kind: ImageStream
+ - kind: ImageStreamq
    apiVersion: v1
    metadata:
     name: kapua-hono-integration
 
-#buid!
+#build
  - kind: BuildConfig
    apiVersion: v1
    metadata:
